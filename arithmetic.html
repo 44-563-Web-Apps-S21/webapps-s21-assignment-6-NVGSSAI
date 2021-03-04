@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head><title>Html for Arithmetic</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        h2 {
+            text-shadow: 2px 2px;
+            text-align: center;
+            color: red;
+        }
+
+        #result,
+        #result2 {
+
+            font-weight: bold;
+            color: rgb(11, 126, 126);
+        }
+        .form{
+            color:grey;
+        }
+    </style>
 </head>
 <body>
-
+    <div class="container jumbotron">
 <h2>Venkata Gopi Siva Sai Nallapati computes</h2>
 
 <form>
+    <div class="form">
     <label for="form1_firstelement">Enter a number</label>
     <input type ="number" id="form1_firstelement" name="form1_firstelement" value=10> <br>
-
+</div>
+<div class="form">
     <label for="form1_secondelement">Enter a number</label>
     <input type ="number" id="form1_secondelement" name="form1_secondelement" value=2> <br>
-
-    <input type="button" onclick="permutations()" value="Compute">
+</div>
+    <input type="button" style="color: red;"  onclick="permutations()" value="Compute">
 </form>
 
 <p id="result">first permute second is product</p>
@@ -32,9 +57,11 @@
        value="divide">
     <label for="divide">/</label></br>
 
-    <input type="button" onclick="processRadio()" value="Get values from radio group">
+    <input type="button" style="color: red;" onclick="processRadio()" value="Get values from radio group">
+
   </form>
   <p id="result2">The result will be replaced here</p>
+</div>
 <script> 
 function permutations(){
     console.log("Getting form values")
